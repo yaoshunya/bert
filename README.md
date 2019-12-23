@@ -122,11 +122,11 @@ Y = pickle.load(open("../data/out/data_y.pickle","rb"))
 ```
 学習とテストに使用するプレイスホルダーを用意し、今回用いるネットワークを作成する。baseNNの引数であるratesをもとにfc層でdropoutを行っている。
 ```test_corpolation_classifier.py
-x_train = tf.placeholder(tf.float32,shape=[None,400])
+x_train = tf.placeholder(tf.float32,shape=[None,1536])
 x_label = tf.placeholder(tf.float32,shape=[None,1])
 
 
-x_test = tf.placeholder(tf.float32,shape=[None,400])
+x_test = tf.placeholder(tf.float32,shape=[None,1536])
 x_test_label = tf.placeholder(tf.float32,shape=[None,1])
 
 ## build model
